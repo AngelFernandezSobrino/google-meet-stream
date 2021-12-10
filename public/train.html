@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title>Intranet IEEtec</title>
+    <meta name="description" content="IEEtec Intranet Website">
+    <script src="/javascript/size.js"></script>
+    <link rel="stylesheet" href="/styles/app.css?v=2.3">
+    <link rel="stylesheet" href="/styles/buttons.css?v=2.3">
+    <link rel="stylesheet" href="/styles/form.css?v=2.3">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <!-- Load local TensorFlow.js -->
+    <script src="packages/tf.min.js"></script>
+    <script src="packages/mobilenet.min.js"></script>
+    <script src="packages/knn-classifier.min.js"></script>
+</head>
+
+<body>
+    <div class="contenedorView">
+
+        <video autoplay playsinline muted id="webcam" width="1920" height="1080"></video>
+
+        <script src="app.js"></script>
+    </div>
+</body>
+
+</html>
