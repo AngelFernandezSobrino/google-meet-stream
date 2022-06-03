@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Webcam</title>
+    <meta name="description" content="IEEtec Intranet Website" />
+    <style>
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contenedorView">
+      <video
+        autoplay
+        playsinline
+        muted
+        id="webcam"
+        width="100%"
+      ></video>
+    </div>
+
+    <script>
+      const webcamElement = document.getElementById("webcam");
+      function setupWebcam() {
+        navigator.mediaDevices
+          .getUserMedia({ audio: true, video: { width: 1920, height: 1080 } })
+          .then((stream) => {
+            webcamElement.srcObject = stream;
+          });
+      }
+
+      setupWebcam();
+    </script>
+  </body>
+</html>
